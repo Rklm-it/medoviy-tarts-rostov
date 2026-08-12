@@ -17,7 +17,7 @@ import {
   STEPS,
 } from "@/lib/site-data";
 import heroCake from "@/assets/hero-cake.jpg";
-import handsCraft from "@/assets/hands-craft.jpg";
+import craftCake from "@/assets/craft-cake.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -70,7 +70,7 @@ function Index() {
         <div className="relative overflow-hidden rounded-[30px]">
           <img
             src={heroCake}
-            alt="Многоярусный торт ручной работы с ягодами"
+            alt="Трёхъярусный свадебный торт с инициалами и вафельной бумагой"
             width={1600}
             height={1104}
             className="h-[62vh] max-h-[640px] min-h-[380px] w-full object-cover"
@@ -139,8 +139,8 @@ function Index() {
               Итоговая цена зависит от сложности декора, ягоды и сложные фигурки считаются отдельно.
             </p>
             <img
-              src={handsCraft}
-              alt="Кондитер вручную лепит цветок из марципана"
+              src={craftCake}
+              alt="Двухъярусный торт с фигуркой кита — работа кондитерского дома «Медовый»"
               loading="lazy"
               width={1200}
               height={900}
