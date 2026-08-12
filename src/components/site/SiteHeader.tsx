@@ -18,7 +18,7 @@ function Logo({ className = "" }: { className?: string }) {
         М
       </span>
       <span className="min-w-0 leading-tight">
-        <span className="block truncate text-[11px] uppercase tracking-[0.18em] text-caramel">
+        <span className="block truncate text-[9px] uppercase tracking-[0.1em] text-caramel sm:text-[11px] sm:tracking-[0.18em]">
           Кондитерский дом
         </span>
         <span className="block font-display text-xl text-foreground">Медовый</span>
