@@ -18,6 +18,7 @@ import {
 } from "@/lib/site-data";
 import heroCake from "@/assets/hero-cake.jpg";
 import craftCake from "@/assets/craft-cake.jpg";
+import emblem from "@/assets/emblem.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -275,12 +276,13 @@ function Index() {
         <div className="section-shell grid gap-10 lg:grid-cols-3">
           <div>
             <div className="flex items-center gap-3">
-              <span
-                aria-hidden
-                className="grid size-11 shrink-0 place-items-center rounded-2xl bg-accent font-display text-lg text-accent-foreground"
-              >
-                М
-              </span>
+              <img
+                src={emblem}
+                alt=""
+                width={320}
+                height={271}
+                className="h-12 w-auto shrink-0"
+              />
               <span className="leading-tight">
                 <span className="block text-[11px] uppercase tracking-[0.18em] text-primary-foreground/70">
                   Кондитерский дом

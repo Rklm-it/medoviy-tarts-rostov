@@ -1,4 +1,5 @@
 import { Phone, Send, MessageCircle } from "lucide-react";
+import emblem from "@/assets/emblem.png";
 import {
   LINK_MAX,
   LINK_TELEGRAM,
@@ -11,12 +12,13 @@ import {
 function Logo({ className = "" }: { className?: string }) {
   return (
     <a href="#top" className={`flex min-w-0 items-center gap-3 ${className}`}>
-      <span
-        aria-hidden
-        className="grid size-11 shrink-0 place-items-center rounded-2xl bg-accent font-display text-lg text-accent-foreground"
-      >
-        М
-      </span>
+      <img
+        src={emblem}
+        alt=""
+        width={320}
+        height={271}
+        className="h-11 w-auto shrink-0"
+      />
       <span className="min-w-0 leading-tight">
         <span className="hidden text-[11px] uppercase tracking-[0.18em] text-caramel sm:block">
           Кондитерский дом
