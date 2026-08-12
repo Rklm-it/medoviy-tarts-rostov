@@ -65,25 +65,31 @@ function Index() {
     <div id="top" className="min-h-screen bg-background">
       <SiteHeader />
 
-      {/* HERO */}
-      <section className="section-shell pt-5 sm:pt-8">
-        <div className="relative overflow-hidden rounded-[30px]">
-          <img
-            src={heroCake}
-            alt="Трёхъярусный свадебный торт с инициалами и вафельной бумагой"
-            width={1600}
-            height={1104}
-            className="h-[62vh] max-h-[640px] min-h-[380px] w-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/35 to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 p-5 sm:p-8 lg:p-12">
-            <h1 className="max-w-3xl font-display text-[clamp(1.9rem,6vw,3.6rem)] leading-[1.08] text-primary-foreground">
+      {/* HERO. Снимки у клиента вертикальные, студийные. Широкая полоса с
+          обрезкой по центру резала торт пополам, поэтому фото стоит карточкой
+          в своих пропорциях, а текст рядом. */}
+      <section className="section-shell pt-6 sm:pt-10 lg:pt-14">
+        <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-14">
+          <div className="order-1 lg:order-2">
+            <div className="overflow-hidden rounded-[30px] bg-secondary shadow-soft">
+              <img
+                src={heroCake}
+                alt="Трёхъярусный свадебный торт с инициалами и вафельной бумагой"
+                width={1600}
+                height={2178}
+                className="aspect-[3/4] w-full object-cover"
+              />
+            </div>
+          </div>
+
+          <div className="order-2 lg:order-1">
+            <h1 className="font-display text-[clamp(2rem,5.2vw,3.6rem)] leading-[1.08] text-foreground">
               Торты на заказ в Ростове-на-Дону
             </h1>
-            <p className="mt-3 max-w-xl text-base text-primary-foreground/90 sm:text-lg">
+            <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
               Ручная работа, натуральные ингредиенты, доставка по городу
             </p>
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <a
                 href="#calculator"
                 className="inline-flex h-14 items-center justify-center rounded-2xl bg-accent px-7 text-base font-semibold text-accent-foreground transition-colors hover:bg-caramel hover:text-caramel-foreground"
@@ -94,12 +100,12 @@ function Index() {
                 href={LINK_TELEGRAM}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex h-14 items-center justify-center rounded-2xl border border-primary-foreground/60 px-7 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/15"
+                className="inline-flex h-14 items-center justify-center rounded-2xl border border-caramel px-7 text-base font-semibold text-foreground transition-colors hover:bg-secondary"
               >
                 Написать в мессенджер
               </a>
             </div>
-            <p className="mt-4 text-xs text-primary-foreground/80 sm:text-sm">
+            <p className="mt-5 text-sm text-muted-foreground">
               Принимаем срочные заказы — сделаем торт за один день
             </p>
           </div>
@@ -144,7 +150,7 @@ function Index() {
               loading="lazy"
               width={1200}
               height={900}
-              className="mt-8 hidden w-full rounded-[28px] object-cover lg:block"
+              className="mt-9 hidden aspect-[3/4] w-full max-w-[360px] rounded-[28px] object-cover lg:block"
             />
           </div>
           <Calculator />
